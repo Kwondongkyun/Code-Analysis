@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(void)
+{
+	int N, i, sum = 0;
+	int a[100] = { 0 };
+	scanf_s("%d", &N);
+
+	for (i = 0; i < N; i++) {
+		scanf_s("%1d", &a[i]);          // 배열에 1개씩 들어간다.  (중요)
+		sum += a[i];
+	}
+	printf("%d", sum);
+}
