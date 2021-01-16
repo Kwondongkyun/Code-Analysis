@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(void)
+{
+	int a[9] = { 0 };       // 각 자리수에 0~9까지의 수가 몇 번 사용되었는지 count하는 배열
+	int A, B, C, m, n;
+	int i;
+	scanf("%d", &A);
+	scanf("%d", &B);
+	scanf("%d", &C);
+	m= A * B * C;
+
+	while (m > 0) {
+		n = m % 10;         // 맨 끝자리수를 구해준다.
+		m = m / 10;         // 한 루프를 돌 때 마다 맨 끝자리 수를 없애준다.
+		a[n]++;
+	}
+
+	for (i = 0; i < 10; i++) {
+		printf("%d\n", a[i]);
+	}
+}
