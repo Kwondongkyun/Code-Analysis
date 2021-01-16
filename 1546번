@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(void)
+{
+	int N, i;
+	double max = 0, sum = 0;
+	double a[1000] = { 0 };
+	scanf("%d", &N);
+
+	for (i = 0; i < N; i++) {
+		scanf("%lf", &a[i]);
+		if (max < a[i]) {
+			max = a[i];
+		}
+	}
+	for (i = 0; i < N; i++) {
+		a[i] = (a[i] / (double)max) * 100;              // 형변환 주의
+		sum += a[i];
+	}
+	printf("%lf", sum / (double)N);
+}
