@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(void)
+{
+	int A, B, C;
+	scanf_s("%d %d %d", &A, &B, &C);
+
+	if (C <= B)
+		printf("-1\n");
+	else
+		printf("%d\n", A / (C - B) + 1);              // C * i > A + B * i : 손익분기점이 나오는 경우
+}                                                        -> i > A / (C - B)
+                                                         -> i = A / (C - B) + 1
